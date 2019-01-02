@@ -12,6 +12,7 @@
         <app-live v-if="active === 0"/>
         <app-recommend v-if="active === 1"/>
         <app-hot v-if="active === 2"/>
+        <app-suki v-if="active === 3"/>
       </van-tab>
     </van-tabs>
   </div>
@@ -20,6 +21,8 @@
 import AppLive from "@/components/category/live";
 import AppRecommend from "@/components/category/recommend";
 import AppHot from "@/components/category/hot";
+import AppSuki from "@/components/category/suki";
+
 let $tab;
 const baseList = ["直播", "推荐", "热门", "追番", "我的2018", "饿出幻觉"];
 
@@ -27,7 +30,8 @@ export default {
   components: {
     AppHot,
     AppRecommend,
-    AppLive
+    AppLive,
+    AppSuki
   },
   data() {
     return {

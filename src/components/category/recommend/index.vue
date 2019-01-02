@@ -164,7 +164,7 @@ export default {
   position: relative;
   width: 90%;
   height: 100px;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   border-radius: 5px;
   padding: 0 5%;

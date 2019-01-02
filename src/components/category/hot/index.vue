@@ -109,7 +109,7 @@ export default {
   position: relative;
   width: 100%;
   height: 200px;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -119,7 +119,7 @@ export default {
   width: 35px;
   height: 35px;
   margin-right: 5px;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   border-radius: 50%;
 }
