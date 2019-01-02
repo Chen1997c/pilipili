@@ -261,7 +261,7 @@ export default {
       maxLength: 12,
       addZb: addZb
     };
-  }
+  },
 };
 </script>
 <style scoped>

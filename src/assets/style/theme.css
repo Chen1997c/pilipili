@@ -1,0 +1,40 @@
+.ellipsis-two {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.app-fl {
+  float: left;
+}
+.app-fr {
+  float: right;
+}
+.app-clear {
+  zoom:1
+}
+.app-clear:before,.app-clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.app-padding {
+  padding: 10px;
+}
+.app-top {
+  margin-bottom: 5px;
+  overflow: auto;
+}
+.app-top .title {
+  float: left;
+  font-size: 15px;
+  color: #444;
+}
+.app-top .see {
+  float: right;
+  font-size: 13px;
+  color: #999;
+}
+
