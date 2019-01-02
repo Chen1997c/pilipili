@@ -7,7 +7,7 @@
 export default {};
 </script>
 <style scoped>
-@import "//at.alicdn.com/t/font_991059_rqzk1w8pe8.css";
+@import "//at.alicdn.com/t/font_991059_mvch1w68c17.css";
 #app {
   font-family: PingFang SC, Helvetica Neue, Helvetica, STHeiTi, sans-serif;
 }

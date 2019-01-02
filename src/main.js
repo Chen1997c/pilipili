@@ -5,6 +5,7 @@ import store from './store'
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import 'font-awesome/css/font-awesome.min.css';
+import '@/assets/style/theme.css';
 import countIcon from '@/components/common/countIcon'
 
 Vue.use(Vant);

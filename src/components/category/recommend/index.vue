@@ -21,7 +21,7 @@
             </div>
           </div>
           <div class="content">
-            <div class="title ellipsis">{{recommend.title}}</div>
+            <div class="title ellipsis-two">{{recommend.title}}</div>
             <div class="tags">
               <div class="type">
                 <van-tag plain type="danger" v-if="recommend.article">文章</van-tag>
@@ -206,15 +206,6 @@ export default {
 }
 .more {
   float: right;
-}
-
-.ellipsis {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 </style>
 
