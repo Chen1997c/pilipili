@@ -71,6 +71,9 @@ export default {
       }
       $tabAll[index].style.color = "#fb7299";
     }
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
