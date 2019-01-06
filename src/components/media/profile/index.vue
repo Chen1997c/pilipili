@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <i class="iconfont icon-58"></i>
-      &nbsp;&nbsp;&nbsp;
+      &nbsp;&snbsp;&nbsp;
       第12话 - 故障的齿轮
     </div>
     <van-tabs
@@ -23,7 +23,6 @@
             </van-col>
             <van-col :span="13" class="info">
               <div class="van-ellipsis title">{{resource.title}}</div>
-<<<<<<< HEAD
               <div class="info-tag info-tag1">
                 <i class="iconfont icon-Play"></i>
                 {{resource.playBack}}
@@ -31,13 +30,6 @@
                 {{resource.like}}
               </div>
               <div class="info-tag info-tag2">{{resource.state}}</div>
-=======
-              <div class="info-tag">{{resource.state}}</div>
-              <div class="info-tag">
-                <i class="iconfont icon-Play"></i>
-                {{resource.playBack}}
-              </div>
->>>>>>> a5f664d3b7ed675db2636c51f463651d08f8ff13
               <div class="info-tag ellipsis-two" v-html="resource.description"></div>
             </van-col>
             <van-col class="breif-item" :span="5">
@@ -46,12 +38,7 @@
               </div>
               <div class="grade">
                 <div class="var">
-<<<<<<< HEAD
                   {{resource.grade}}<span style="font-size:13px">分</span>
-=======
-                  {{resource.grade}}
-                  <span style="font-size:13px">分</span>
->>>>>>> a5f664d3b7ed675db2636c51f463651d08f8ff13
                 </div>
                 <div class="var-num">{{resource.gradeNum}}人</div>
               </div>
@@ -138,12 +125,7 @@
                 <div class="recommend-right">
                   <div class="grade">
                     <div class="var">
-<<<<<<< HEAD
                       {{anime.grade}}<span style="font-size:13px">分</span>
-=======
-                      {{anime.grade}}
-                      <span style="font-size:13px">分</span>
->>>>>>> a5f664d3b7ed675db2636c51f463651d08f8ff13
                     </div>
                     <div class="var-num">{{anime.gradeNum}}人</div>
                   </div>
