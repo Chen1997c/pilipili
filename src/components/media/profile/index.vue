@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <i class="iconfont icon-58"></i>
-      &nbsp;&nbsp;&nbsp;
+      &nbsp;&snbsp;&nbsp;
       第12话 - 故障的齿轮
     </div>
     <van-tabs
