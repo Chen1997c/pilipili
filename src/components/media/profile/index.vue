@@ -278,7 +278,6 @@ export default {
   font-size: 16px;
   color: #555;
 }
-<<<<<<< HEAD
 .info-tag,
 .info-tag .iconfont {
   font-size: 12px;
@@ -289,13 +288,6 @@ export default {
 }
 
 .info-tag .like {
-=======
-.info-tag {
-  font-size: 12px;
-  color: #999;
-}
-.like {
->>>>>>> a5f664d3b7ed675db2636c51f463651d08f8ff13
   width: 100%;
   float: right;
   border-radius: 2px;
