@@ -26,7 +26,7 @@ export default {
       mutex: true,
       video: {
         url:
-          "//172.16.10.66:1000/Onigiri - 01 GB (Bilibili 1280x720 x264 AAC).mp4",
+          "https://vd4.bdstatic.com/mda-igijckpnqpvxdrxn/hd/mda-igijckpnqpvxdrxn.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D&auth_key=1546697397-0-0-904b2c34da08b5f771d38a3060021b4e&bcevod_channel=searchbox_feed&pd=bjh",
         pic: "dplayer.png",
         thumbnails: "thumbnails.jpg",
         type: "auto"

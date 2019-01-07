@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <i class="iconfont icon-58"></i>
-      &nbsp;&nbsp;&nbsp;
+      &nbsp;&snbsp;&nbsp;
       第12话 - 故障的齿轮
     </div>
     <van-tabs
@@ -23,11 +23,13 @@
             </van-col>
             <van-col :span="13" class="info">
               <div class="van-ellipsis title">{{resource.title}}</div>
-              <div class="info-tag">{{resource.state}}</div>
-              <div class="info-tag">
+              <div class="info-tag info-tag1">
                 <i class="iconfont icon-Play"></i>
                 {{resource.playBack}}
+                <i class="iconfont icon-like"></i>
+                {{resource.like}}
               </div>
+              <div class="info-tag info-tag2">{{resource.state}}</div>
               <div class="info-tag ellipsis-two" v-html="resource.description"></div>
             </van-col>
             <van-col class="breif-item" :span="5">
@@ -36,8 +38,7 @@
               </div>
               <div class="grade">
                 <div class="var">
-                  {{resource.grade}}
-                  <span style="font-size:13px">分</span>
+                  {{resource.grade}}<span style="font-size:13px">分</span>
                 </div>
                 <div class="var-num">{{resource.gradeNum}}人</div>
               </div>
@@ -124,8 +125,7 @@
                 <div class="recommend-right">
                   <div class="grade">
                     <div class="var">
-                      {{anime.grade}}
-                      <span style="font-size:13px">分</span>
+                      {{anime.grade}}<span style="font-size:13px">分</span>
                     </div>
                     <div class="var-num">{{anime.gradeNum}}人</div>
                   </div>
@@ -260,11 +260,16 @@ export default {
   font-size: 16px;
   color: #555;
 }
-.info-tag {
+.info-tag,
+.info-tag .iconfont {
   font-size: 12px;
   color: #999;
 }
-.like {
+.info-tag1 {
+  margin: 3px 0;
+}
+
+.info-tag .like {
   width: 100%;
   float: right;
   border-radius: 2px;

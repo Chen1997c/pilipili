@@ -201,11 +201,10 @@ const mySukiList = [
 ];
 
 const carouselImg = [
-  require("E://app/zhuifan/ci1.jpg"),
-  require("E://app/zhuifan/ci2.jpg"),
-  require("E://app/zhuifan/ci3.jpg"),
-  require("E://app/zhuifan/ci4.jpg"),
-  require("E://app/zhuifan/ci5.png")
+  require("@/assets/images/zhuifan/z01.jpg"),
+  require("@/assets/images/zhuifan/z02.jpg"),
+  require("@/assets/images/zhuifan/z03.jpg"),
+  require("@/assets/images/zhuifan/z04.jpg"),
 ];
 
 const recommendFanju = [
