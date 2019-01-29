@@ -12,14 +12,16 @@
 .app-fr {
   float: right;
 }
-.app-clear {
-  zoom:1
+.app-clear:before,
+.app-clear:after {
+    content: " ";
+    display: table;
 }
-.app-clear:before,.app-clear:after {
-  content: "";
-  display: block;
-  clear: both;
+
+.app-clear:after {
+    clear: both;
 }
+
 .app-padding {
   padding: 10px;
 }

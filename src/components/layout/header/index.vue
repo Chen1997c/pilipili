@@ -50,15 +50,17 @@ export default {
   font-size: 20px;
 }
 #header ul {
+  display: flex;
+  align-items: center;
   list-style: none;
   overflow: auto;
 }
 #header li {
   float: left;
-  margin-right: 10px;
   height: 25px;
   padding: 10px 0;
   line-height: 25px;
+  flex-grow: 1;
 }
 .avatar {
   height: 25px;

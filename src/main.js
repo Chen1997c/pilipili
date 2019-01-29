@@ -6,6 +6,7 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 import 'font-awesome/css/font-awesome.min.css';
 import '@/assets/style/theme.css';
+import 'animate.css'
 import countIcon from '@/components/common/countIcon'
 
 Vue.use(Vant);

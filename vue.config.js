@@ -1,4 +1,9 @@
 module.exports = {
-  baseUrl: './',
-  assetsDir: 'static'
+  baseUrl: '',
+  assetsDir: undefined,
+  outputDir: undefined,
+  runtimeCompiler: undefined,
+  productionSourceMap: undefined,
+  parallel: undefined,
+  css: undefined
 }
