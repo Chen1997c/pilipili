@@ -1,7 +1,7 @@
 <template>
   <div>
     <header id="header">
-      <ul>
+      <ul class="app-clear">
         <li>
           <i class="iconfont icon-list icon" @click="showSideBar"></i>
         </li>
@@ -9,12 +9,29 @@
           <img class="avatar" src="http://static.hdslb.com/images/akari.jpg">
         </li>
         <li>
-          <img @click="goSearch" class="search-img" src="@/assets/images/search.png">
+          <img
+            v-if="modelShow === 0"
+            @click="goSearch"
+            class="search-img"
+            src="@/assets/images/search.png"
+          >
+          <div v-if="modelShow === 1" class="title">频道</div>
+          <div v-if="modelShow === 2" class="title">动态</div>
         </li>
         <li>
-          <i class="iconfont icon-game icon"></i>
-          <i class="iconfont icon-download icon"></i>
-          <count-icon name="iconfont icon-comment icon" count="1"/>
+          <template v-if="modelShow !== 2">
+            <i class="iconfont icon-download icon"></i>
+          </template>
+          <template v-if="modelShow === 0">
+            <i class="iconfont icon-game icon"></i>
+            <count-icon name="iconfont icon-comment icon" count="1"/>
+          </template>
+          <template v-if="modelShow === 1">
+            <i class="iconfont icon-search icon" @click="$router.push('/search')"></i>
+          </template>
+          <template v-if="modelShow === 2">
+            <i class="iconfont icon-bianji icon"></i>
+          </template>
         </li>
       </ul>
     </header>
@@ -30,7 +47,8 @@ export default {
   },
   data() {
     return {
-      show: false
+      show: false,
+      modelShow: 0
     };
   },
   methods: {
@@ -39,28 +57,41 @@ export default {
     },
     showSideBar() {
       this.show = true;
+    },
+    modeltoggle(param) {
+      this.modelShow = param;
     }
   }
 };
 </script>
 <style scoped>
+.title {
+  position: absolute;
+  left: 50%;
+  margin-left: -16px;
+  font-size: 16px;
+}
 #header {
   background: #fb7299;
   color: #fff;
   font-size: 20px;
 }
 #header ul {
-  display: flex;
-  align-items: center;
+  position: relative;
   list-style: none;
-  overflow: auto;
 }
 #header li {
   float: left;
   height: 25px;
   padding: 10px 0;
   line-height: 25px;
-  flex-grow: 1;
+  margin-right: 1rem;
+  max-width: 20%;
+}
+#header li:last-child {
+  float: right;
+  margin-right: 1rem;
+  max-width: 35%;
 }
 .avatar {
   height: 25px;
@@ -87,6 +118,5 @@ export default {
   position: relative;
   right: 10px;
 }
-
 </style>
 

@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -9,6 +11,7 @@ import '@/assets/style/theme.css';
 import 'animate.css'
 import countIcon from '@/components/common/countIcon'
 
+Vue.use(VueAxios, axios)
 Vue.use(Vant);
 Vue.component('count-icon',countIcon)
 

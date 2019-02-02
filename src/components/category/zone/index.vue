@@ -115,6 +115,10 @@ export default {
       itemList: itemList,
       res: res
     };
+  },
+  mounted () {
+      this.$emit('changeheader',1);
+      
   }
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div>
     <van-tabs
       :line-height="2"
       :line-width="35"
@@ -15,40 +15,25 @@
     </van-tabs>
     <van-swipe ref="swipe" @change="change" :loop="false" :duration="250" :show-indicators="false">
       <van-swipe-item v-for="(item,index) in tabList">
-        <app-recommend v-if="index === 0"/>
-        <app-hot v-if="hotInit && index === 1"/>
-        <app-suki v-if="sukiInit && index === 2"/>
+        <news-video v-if="index === 0"/>
+        <news-multiple v-if="multipleInit && index === 1"/>
+        <news-video v-if="hotInit && index === 2"/>
       </van-swipe-item>
     </van-swipe>
   </div>
 </template>
 <script>
-import AppRecommend from "@/components/category/home/recommend";
-import AppHot from "@/components/category/home/hot";
-import AppSuki from "@/components/category/home/suki";
+const baseList = ["视频", "综合", "热门"];
 let $tabAll;
-const baseList = ["推荐", "热门", "追番"];
+import NewsVideo from "@/components/category/news/video";
+import NewsMultiple from "@/components/category/news/multiple";
 export default {
   components: {
-    AppHot,
-    AppRecommend,
-    AppSuki
-  },
-  data() {
-    return {
-      active: 0,
-      tabList: baseList,
-      itemClass: {
-        baseClass: "tab-item",
-        activeClass: "tab-item active"
-      },
-      position: "static",
-      hotInit: null,
-      sukiInit: null
-    };
+    NewsVideo,
+    NewsMultiple
   },
   mounted() {
-    this.$emit("changeheader", 0);
+    this.$emit("changeheader", 2);
     this.$nextTick(() => {
       $tabAll = document.getElementsByClassName("van-tab");
       $tabAll[0].style.color = "#fb7299";
@@ -60,16 +45,13 @@ export default {
     });
   },
   methods: {
-    changeActive(index) {
-      this.$refs.swipe.swipeTo(index);
-    },
     change(index) {
       switch (index) {
         case 1:
-          this.hotInit = 1;
+          this.multipleInit = 1;
           break;
         case 2:
-          this.sukiInit = 1;
+          this.hotInit = 1;
           break;
         default:
           break;
@@ -79,16 +61,20 @@ export default {
       }
       $tabAll[index].style.color = "#fb7299";
       this.active = index;
+    },
+    changeActive(index) {
+      this.$refs.swipe.swipeTo(index);
     }
+  },
+  data() {
+    return {
+      active: 0,
+      tabList: baseList,
+      multipleInit: null,
+      hotInit: null
+    };
   }
 };
 </script>
-<style scoped>
-.tab {
-  width: 70%;
-}
-.active {
-  color: #fb7299;
-  border-bottom: 2px solid #fb7299;
-}
-</style
+
+

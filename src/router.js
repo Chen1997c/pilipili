@@ -6,6 +6,7 @@ import Search from '@/views/search'
 import Media from '@/views/media'
 import AppHome from '@/components/category/home'
 import AppZone from '@/components/category/zone'
+import AppNews from '@/components/category/news'
 import MediaDetail from '@/components/media/content/details'
 import MediaDescription from '@/components/media/content/description'
 import MediaParagraph from '@/components/media/content/paragraph'
@@ -30,6 +31,11 @@ export default new Router({
           path: '/zone',
           name: 'appZone',
           component: AppZone
+        },
+        {
+          path: '/news',
+          name: 'appNews',
+          component: AppNews
         }
       ]
     },

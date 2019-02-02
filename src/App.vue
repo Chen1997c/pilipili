@@ -7,7 +7,7 @@
 export default {};
 </script>
 <style>
-@import "http://at.alicdn.com/t/font_991059_9hb5m68adw.css";
+@import "http://at.alicdn.com/t/font_991059_hw88hxtokv.css";
 </style>
 
 
